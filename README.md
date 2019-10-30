@@ -4,10 +4,10 @@
 
 ## Install
 
-With [fisherman]
+With [`fisher`]
 
-```
-fisher mwilliammyers/j
+```fish
+fisher add mwilliammyers/j
 ```
 
 ## Usage
@@ -16,4 +16,6 @@ fisher mwilliammyers/j
 j
 ```
 
-[fisherman]: https://github.com/jorgebucaran/fisher
+[fishshell]: https://fishshell.com/
+[`fish`]: https://fishshell.com
+[`fisher`]: https://github.com/jorgebucaran/fisher
