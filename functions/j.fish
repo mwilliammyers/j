@@ -1,5 +1,5 @@
 function j -d "cd with smarts"
-    if test -d $argv
+    if set -q argv[1] && test -d $argv
         cd $argv
     else
         __fzf_cd $argv
