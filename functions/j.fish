@@ -1,3 +1,7 @@
 function j -d "cd with smarts"
-	__fzf_cd $argv
+    if test -d $argv
+        cd $argv
+    else
+        __fzf_cd $argv
+    end
 end
