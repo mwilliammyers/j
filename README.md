@@ -7,7 +7,7 @@
 With [`fisher`]
 
 ```fish
-fisher install mwilliammyers/j
+fisher install jethrokuan/fzf mwilliammyers/j
 ```
 
 ## Usage
