@@ -11,13 +11,3 @@ if type -q 'fd'
     set -q FZF_CD_WITH_HIDDEN_COMMAND
     or set -Ux FZF_CD_WITH_HIDDEN_COMMAND "fd -Lt d --hidden $exclude"
 end
-    
-function _j_install --on-event j_install
-    # install dependencies
-    fisher install jethrokuan/fzf
-end
-
-function _j_uninstall --on-event j_uninstall
-    functions --erase _j_install
-    functions --erase _j_uninstall
-end
