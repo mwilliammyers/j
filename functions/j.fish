@@ -1,7 +1,8 @@
 function j -d "cd with smarts"
-    if set -q argv[1] && test -d $argv
-        cd $argv
+    if test -d "$argv[1]"
+        cd $argv[1]
     else
-        __fzf_cd $argv
+        set -l dir (fd -t d -HI | fzf --query "$argv")
+        and cd $dir
     end
 end

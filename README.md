@@ -4,18 +4,22 @@
 
 ## Install
 
-With [`fisher`]
+With [`fisher`]:
 
 ```fish
-fisher install jethrokuan/fzf mwilliammyers/j
+fisher install PatrickF1/fzf.fish mwilliammyers/j
 ```
+
+### Dependencies
+
+- [fzf](https://github.com/junegunn/fzf)
+- [fd](https://github.com/sharkdp/fd)
 
 ## Usage
 
 ```fish
-j
+j           # fuzzy find directory
+j foo       # cd to foo if it's a directory, otherwise fuzzy find with "foo" as query
 ```
 
-[fishshell]: https://fishshell.com/
-[`fish`]: https://fishshell.com
 [`fisher`]: https://github.com/jorgebucaran/fisher
