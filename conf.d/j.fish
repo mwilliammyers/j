@@ -6,5 +6,5 @@ set -gx FZF_DEFAULT_OPTS '--layout=reverse --height=33% --preview-window=wrap --
 set -gx fzf_fd_opts --hidden
 
 # Preview commands
-set -gx fzf_preview_dir_cmd eza --all --color=always 2>/dev/null || ls -la
-set -gx fzf_preview_file_cmd bat --style=numbers --color=always 2>/dev/null || cat
+set -gx fzf_preview_dir_cmd eza --all --color=always
+set -gx fzf_preview_file_cmd bat --style=numbers --color=always
