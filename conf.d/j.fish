@@ -18,11 +18,11 @@ set -l fzf_exclude \
 # For fzf.vim :Files command
 if type -q fd
     set -q FZF_DEFAULT_COMMAND
-    or set -gx FZF_DEFAULT_COMMAND (string join ' ' -- fd --type f --hidden (string escape -- $fzf_exclude))
+    or set -gx FZF_DEFAULT_COMMAND (string join ' ' -- fd --type f --hidden --no-ignore (string escape -- $fzf_exclude))
 end
 
 # For PatrickF1/fzf.fish
-set -gx fzf_fd_opts --hidden $fzf_exclude
+set -gx fzf_fd_opts --no-ignore --hidden $fzf_exclude
 
 # Preview commands
 set -gx fzf_preview_dir_cmd eza --all --color=always
