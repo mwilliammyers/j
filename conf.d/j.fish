@@ -18,7 +18,7 @@ set -l fzf_exclude \
 # For fzf.vim :Files command
 if type -q fd
     set -q FZF_DEFAULT_COMMAND
-    or set -gx FZF_DEFAULT_COMMAND "fd --type f --hidden $fzf_exclude"
+    or set -gx FZF_DEFAULT_COMMAND (string join ' ' -- fd --type f --hidden (string escape -- $fzf_exclude))
 end
 
 # For PatrickF1/fzf.fish
