@@ -10,10 +10,16 @@ set -l fzf_exclude \
     -E '*Cache*/' -E '*cache*/' \
     -E dist/ -E build/ \
     -E .npm/ -E node_modules/ -E .node-gyp/ -E .apm/ \
-    -E venv/ -E env/ -E .venv/ -E __pycache__/ -E .mypy_cache/ -E .pytest_cache/ -E .ruff_cache/ -E '*.egg-info/' \
+    -E venv/ -E env/ -E .venv/ -E __pycache__/ -E .mypy_cache/ -E .pytest_cache/ -E .ruff_cache/ -E .hypothesis/ -E .tox/ -E .nox/ -E '*.egg-info/' \
     -E .cargo/ -E '*target/' \
     -E '*.xcodeproj/' \
-    -E vendor/
+    -E vendor/ \
+    -E .next/ -E .nuxt/ -E .output/ -E .parcel-cache/ -E .turbo/ -E .webpack/ \
+    -E .rustup/ \
+    -E .direnv/ -E .terraform/ -E .docker/ \
+    -E coverage/ -E .coverage/ \
+    -E .Spotlight-V100/ -E .fseventsd/ \
+    -E site-packages/
 
 # For fzf.vim :Files command
 if type -q fd
